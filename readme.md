@@ -5,8 +5,10 @@
 [![NPM version][npm-version-image]][npm-url]
 [![MIT License][license-image]][license]
 
-**@pinemach/obj-permute** is a small JavaScript package with a single concern:
-truncating datetime inputs to remove all precision past a given time unit.
+**@pinemach/obj-permute** is a small JavaScript package which can be used
+to iterate the list of objects representing every combination of attribute
+values as specified by an input object whose attributes refer to lists of
+possible values.
 
 You can read the full API documentation at 
 **[pineapplemachine.github.io/obj-permute-js/](https://pineapplemachine.github.io/obj-permute-js/)**.
