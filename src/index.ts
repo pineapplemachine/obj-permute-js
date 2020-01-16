@@ -38,20 +38,30 @@ export function getObjectPermutations<T extends object>(
  * Iterator class for objects returned by {@link getObjectPermutations}.
  */
 export class ObjectPermutationsIterator<T extends object> {
-    // The input object describing all state permutations.
+    /**
+     * The input object describing all state permutations.
+     */
     readonly states: T;
-    // Initialized to store a list of the state object's valid keys.
+    /**
+     * Initialized to store a list of the state object's valid keys.
+     */
     readonly keys: (keyof T)[];
-    // Initialized to store a list of indices pinpointing the iterator's
-    // present location in the full list of permutations.
+    /** 
+     * Initialized to store a list of indices pinpointing the iterator's
+     * present location in the full list of permutations
+     */
     readonly indices: number[];
-    // Initialized to represent the full length of the iterator.
-    // This length value may be inaccurate if the total number of permutations
-    // exceeds the value of Number.MAX_SAFE_INTEGER.
+    /**
+     * Initialized to represent the full length of the iterator.
+     * This length value may be inaccurate if the total number of permutations
+     * exceeds the value of Number.MAX_SAFE_INTEGER.
+     */
     readonly length: number;
     
-    // Flag is set to true when the final permutation was consumed by
-    // the iteration.
+    /**
+     * Flag is set to true when the final permutation was consumed by
+     * the iteration.
+     */
     done: boolean;
     
     /**
